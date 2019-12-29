@@ -15,18 +15,16 @@ coefficients can then be selected as the restricted set of predictors.
 Data
 As mentioned above, the data we are using is based on the World Bank Data. Specifically, we are using a cleaned up version of country_population.csv where incomplete rows have been 
 removed and extraneous columns have been deleted. The intent is to use year 1960 to 1999 to train a least squares/correlation models and, subsequently, explore their prediction power 
-for year 2001 to 2016. For a given country, the solution should be a population estimate based on a linear combination of (at most) four other countries. Mathematically, the population 
-of country $C_0$ is estimated based on the population of four other countries, \begin{equation} \hat{C}_0(\text{year}) = \sum_i \alpha_i C_i(\text{year}) \end{equation} subject to $\| \boldsymbol{\alpha} \|_0 \leq 4$. 
-For every country, the parameters $\boldsymbol{\alpha}$ must be derived based on populations from 1960 to 1999.
+for year 2001 to 2016. For a given country, the solution should be a population estimate based on a linear combination of (at most) four other countries. 
 
 Evaluation
 The evaluation criterion is the average sum of squared residuals for populations from 2000 to 2016.
 
 File Descriptions
-population_training.csv – the training data in Kaggle format (40 x 213)
-population_testing.csv – the test data in Kaggle format (17 x 213)
-population_sample.csv – A sample Kaggle solution (17 x 213)
-population_prediction_Cor.csv – A predicton file for Correlation (17 x 213)
-population_prediction_Lasso.csv – A predicton file for LASSO (17 x 213)
-population_parameters_Cor.csv – A parameter file for Correlation (213 x 213)
-population_parameters_Cor.csv – A parameter file for LASSO (213 x 213)
+population_training.csv â€“ the training data in Kaggle format (40 x 213)
+population_testing.csv â€“ the test data in Kaggle format (17 x 213)
+population_sample.csv â€“ A sample Kaggle solution (17 x 213)
+population_prediction_Cor.csv â€“ A predicton file for Correlation (17 x 213)
+population_prediction_Lasso.csv â€“ A predicton file for LASSO (17 x 213)
+population_parameters_Cor.csv â€“ A parameter file for Correlation (213 x 213)
+population_parameters_Cor.csv â€“ A parameter file for LASSO (213 x 213)
